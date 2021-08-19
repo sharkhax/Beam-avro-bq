@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         Pipeline pipeline = AvroToBigQueryWriter.createPipeline(args);
         PipelineResult pipelineResult = AvroToBigQueryWriter.run(pipeline);
-        if (pipeline.getOptions().as(DataflowPipelineOptions.class).getTempLocation() == null) {
+        if (pipeline.getOptions().as(DataflowPipelineOptions.class).getTemplateLocation() == null) {
             pipelineResult.waitUntilFinish();
         }
     }

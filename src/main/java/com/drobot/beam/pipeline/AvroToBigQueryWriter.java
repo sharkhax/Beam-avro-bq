@@ -27,7 +27,7 @@ public class AvroToBigQueryWriter {
     }
 
     @SuppressWarnings("unused")
-    private interface Options extends PipelineOptions {
+    public interface Options extends PipelineOptions {
         @Description("Avro file template")
         @Default.String("gs://fdx-training-1/test-dataset.avro")
         ValueProvider<String> getFileTemplate();
